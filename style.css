@@ -1,0 +1,957 @@
+/* ========== GLOBAL STYLES ========== */
+:root {
+    --primary-color: #F59E0B; /* Orange from 'Get Quote' button */
+    --dark-blue: #1E3A8A;   /* A dark blue for text/headings */
+    --light-gray: #F3F4F6;  /* Light background for sections */
+    --text-color: #374151;
+    --footer-bg: #1F2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ========== BUTTON STYLES ========== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #FFF;
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #d38300;
+    border-color: #d38300;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #FFF;
+    border: 2px solid #FFF;
+}
+
+.btn-secondary:hover {
+    background-color: #FFF;
+    color: #000;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    background-color: #FFF;
+    border-bottom: 1px solid #EEE;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+.hamburger-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ========== HERO SECTION ========== */
+#hero {
+    background-color: var(--dark-blue); /* Placeholder */
+    /* Add your hero background image here */
+    /* background-image: url('images/hero-background.jpg'); */
+    background-size: cover;
+    background-position: center;
+    color: #FFF;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.hero-buttons .btn {
+    margin: 0 0.5rem;
+}
+
+/* ========== STATS SECTION ========== */
+#stats {
+    background-color: var(--light-gray);
+    padding: 4rem 0;
+}
+
+#stats .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* ========== FOOTER ========== */
+.site-footer {
+    background-color: var(--footer-bg);
+    color: #D1D5DB;
+    padding: 4rem 0 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    color: #FFF;
+    margin-bottom: 1.25rem;
+}
+
+.footer-column p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-column ul li a {
+    color: #D1D5DB;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-column p i {
+    width: 20px;
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #374151;
+    color: #FFF;
+    text-align: center;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: #D1D5DB;
+}
+
+.footer-bottom a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ========== RESPONSIVENESS (for mobile) ========== */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide desktop menu */
+    }
+    .hamburger-menu {
+        display: block; /* Show hamburger icon */
+    }
+    
+    .navbar .btn {
+        display: none; /* Hide 'Get Quote' on small screens */
+    }
+
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+
+    #stats .container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+/* ==========
+   ADD THIS TO THE BOTTOM OF YOUR EXISTING style.css FILE
+   ========== */
+
+/* ========== PAGE HEADER ========== */
+.page-header {
+    background-color: var(--dark-blue);
+    color: #FFF;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #D1D5DB;
+}
+
+/* ========== SERVICES PAGE GRID ========== */
+#services-page-grid {
+    padding: 4rem 0;
+    background-color: #FFF;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #FFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.service-card i.fas {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.75rem;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.service-card ul {
+    list-style: none;
+}
+
+.service-card ul li {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.service-card ul li i.fas {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+/* ========== OUR FLEET SECTION ========== */
+#fleet {
+    padding: 4rem 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+#fleet h2 {
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fleet-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.fleet-card {
+    background: #FFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.fleet-card i.fas {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.fleet-card h3 {
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.fleet-card p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.fleet-card span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* ========== CTA BANNER SECTION ========== */
+#cta-banner {
+    background-color: var(--primary-color);
+    color: #FFF;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+#cta-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#cta-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-light {
+    background-color: #FFF;
+    color: var(--primary-color);
+    border: 2px solid #FFF;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-light:hover {
+    background-color: transparent;
+    color: #FFF;
+}
+
+/* ========== RESPONSIVENESS (for new sections) ========== */
+@media (max-width: 992px) {
+    .fleet-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .fleet-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========
+   ADD THIS TO THE BOTTOM OF YOUR EXISTING style.css FILE
+   ========== */
+
+/* ========== TRACKING PAGE ========== */
+#tracking-page {
+    padding: 4rem 0;
+    background-color: var(--light-gray);
+    min-height: 70vh;
+}
+
+.tracking-form-container {
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    padding: 2.5rem;
+    background: #FFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.tracking-form-container h1 {
+    font-size: 2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.tracking-form-container p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+#tracking-form {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#tracking-input {
+    flex: 1;
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+}
+
+#tracking-form .btn {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+#tracking-form .btn i {
+    margin-right: 8px;
+}
+
+.sample-numbers {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.sample-numbers span {
+    color: #6B7280;
+    margin-right: 8px;
+}
+
+.sample-numbers .sample-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* ========== TRACKING RESULTS ========== */
+#tracking-results {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #FFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden; /* For border-radius */
+}
+
+#tracking-results.hidden {
+    display: none;
+}
+
+.status-header {
+    background-color: var(--dark-blue);
+    color: #FFF;
+    padding: 1.25rem 2rem;
+}
+
+.status-header h2 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.status-header h2 i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.shipment-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item label {
+    font-size: 0.85rem;
+    color: #6B7280;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.detail-item span {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.detail-item span i {
+    color: var(--primary-color);
+    margin-right: 5px;
+}
+
+/* Timeline */
+.shipment-timeline {
+    padding: 2rem;
+}
+
+.shipment-timeline h3 {
+    font-size: 1.25rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item {
+    display: flex;
+    position: relative;
+    padding-left: 30px; /* Space for dot and line */
+    padding-bottom: 1.5rem;
+}
+
+/* Vertical line */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    bottom: -5px;
+    width: 2px;
+    background-color: #E5E7EB;
+}
+
+/* Last item shouldn't have a line going down */
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+    background-color: #FFF;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item:first-child .timeline-dot {
+    background-color: var(--primary-color);
+}
+
+.timeline-content strong {
+    font-size: 1rem;
+    color: var(--dark-blue);
+}
+
+.timeline-content p {
+    font-size: 0.9rem;
+    margin: 2px 0;
+}
+
+.timeline-content small {
+    font-size: 0.85rem;
+    color: #6B7280;
+}
+
+/* ========== RESPONSIVENESS (for tracking page) ========== */
+@media (max-width: 768px) {
+    .shipment-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    #tracking-form {
+        flex-direction: column;
+    }
+    
+    .shipment-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========
+   ADD THIS TO THE BOTTOM OF YOUR EXISTING style.css FILE
+   ========== */
+
+/* ========== ABOUT STORY SECTION ========== */
+#about-story {
+    padding: 4rem 0;
+    background: #FFF;
+}
+
+.story-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.story-content h2 {
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+/* ========== MISSION & VISION SECTION ========== */
+#mission-vision {
+    padding: 4rem 0;
+    background: #FFF;
+}
+
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.mission-card,
+.vision-card {
+    padding: 2.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.mission-card {
+    background-color: var(--dark-blue);
+    color: #FFF;
+}
+
+.vision-card {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+}
+
+.mission-card i,
+.vision-card i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.mission-card i {
+    color: var(--primary-color);
+}
+
+.vision-card i {
+    color: var(--dark-blue);
+}
+
+.mission-card h3,
+.vision-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mission-card p,
+.vision-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ========== CORE VALUES SECTION ========== */
+#core-values {
+    padding: 4rem 0;
+    background: var(--light-gray);
+    text-align: center;
+}
+
+#core-values h2 {
+    font-size: 2.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.value-card {
+    background: #FFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.value-card i {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.value-card h4 {
+    font-size: 1.2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.value-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* ========== RESPONSIVENESS (for about page) ========== */
+@media (max-width: 992px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========
+   ADD THIS TO THE BOTTOM OF YOUR EXISTING style.css FILE
+   ========== */
+
+/* ========== CONTACT PAGE ========== */
+#contact-page {
+    padding: 4rem 0;
+    background: var(--light-gray);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* 60% form, 40% info */
+    gap: 2rem;
+    background: #FFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* Contact Form Side */
+.contact-form-container {
+    padding: 2.5rem;
+}
+
+.contact-form-container h2 {
+    font-size: 2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-container p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#contact-form .btn {
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+/* Contact Info Side */
+.contact-info-container {
+    padding: 2.5rem;
+    background: #F9FAFB; /* Slightly different background */
+    border-left: 1px solid #E5E7EB;
+}
+
+.contact-info-container h2 {
+    font-size: 2rem;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.contact-info-container p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    width: 30px;
+    margin-right: 1rem;
+    margin-top: 5px;
+}
+
+.info-item div strong {
+    font-size: 1.1rem;
+    color: var(--dark-blue);
+}
+
+.info-item div p {
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.map-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 2rem;
+    border: 1px solid #E5E7EB;
+}
+
+/* ========== RESPONSIVENESS (for contact page) ========== */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    .contact-info-container {
+        border-left: none;
+        border-top: 1px solid #E5E7EB;
+    }
+}
