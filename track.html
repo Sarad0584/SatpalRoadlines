@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Shipment - Satpal Roadlines</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <strong>Satpal Roadlines</strong>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="track.html" class="active">Track Shipment</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="btn btn-primary">Get Quote</a>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="tracking-page">
+            <div class="container">
+                
+                <div class="tracking-form-container">
+                    <h1>Track Your Shipment</h1>
+                    <p>Enter your tracking number to get real-time updates</p>
+                    
+                    <form id="tracking-form">
+                        <input type="text" id="tracking-input" placeholder="Enter your tracking number (e.g., SPRL2024001)">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Track</button>
+                    </form>
+                    
+                    <div class="sample-numbers">
+                        <span>Sample Tracking Numbers:</span>
+                        <a href="#" class="sample-link">SPRL2024001</a>
+                        <a href="#" class="sample-link">SPRL2024002</a>
+                        <a href="#" class="sample-link">SPRL2024003</a>
+                    </div>
+                </div>
+
+                <div id="tracking-results" class="hidden">
+                    
+                    <div class="status-header">
+                        <h2><i class="fas fa-truck-ramp-box"></i> Shipment Status: In Transit</h2>
+                    </div>
+
+                    <div class="shipment-details-grid">
+                        <div class="detail-item">
+                            <label>Tracking Number</label>
+                            <span id="result-tracking-number">SPRL2024001</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Current Location</label>
+                            <span id="result-location"><i class="fas fa-map-marker-alt"></i> Surat, Gujarat</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Estimated Delivery</label>
+                            <span id="result-delivery"><i class="fas fa-calendar-check"></i> 28 Jul 2024</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Origin</label>
+                            <span id="result-origin">Mumbai, Maharashtra</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Destination</label>
+                            <span id="result-destination">Delhi, NCR</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>Weight</label>
+                            <span id="result-weight">12 Tons</span>
+                        </div>
+                    </div>
+
+                    <div class="shipment-timeline">
+                        <h3>Shipment Timeline</h3>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <strong>In Transit</strong>
+                                <p>Jaipur, Rajasthan</p>
+                                <small>2024-07-27 11:15 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <strong>In Transit</strong>
+                                <p>Surat Hub, Gujarat</p>
+                                <small>2024-07-26 08:30 AM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <strong>Picked Up</strong>
+                                <p>Mumbai Warehouse</p>
+                                <small>2024-07-25 04:45 PM</small>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <strong>Shipment Booked</strong>
+                                <p>Mumbai, Maharashtra</p>
+                                <small>2024-07-25 12:00 AM</small>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
